@@ -3,6 +3,12 @@ class HeroinesController < ApplicationController
     @heroines = Heroine.all
   end
 
+  def search
+    search_term = search_params[:q]
+    @heroines = Heroine.select {|heroine| heroine.power.name == search_term}
+    render :index
+  end
+
   def show
     @heroine = Heroine.find(params[:id])
     @power = @heroine.power
@@ -31,5 +37,9 @@ class HeroinesController < ApplicationController
 
   def heroine_params
     params.require(:heroine).permit(:name, :super_name, :power_id)
+  end
+
+  def search_params
+    params.permit(:q)
   end
 end
