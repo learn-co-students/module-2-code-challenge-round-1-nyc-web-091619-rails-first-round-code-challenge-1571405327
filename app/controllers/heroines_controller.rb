@@ -1,6 +1,11 @@
 class HeroinesController < ApplicationController
   def index
-    @heroines = Heroine.all
+    @powers = Power.all
+    if params.permit(:superpower)
+      @heroines = Heroine.all
+    else
+      @heroines = Heroine.all
+    end
   end
 
   def show
