@@ -9,6 +9,10 @@ powers = [
 ]
 
 powers.each {|power| Power.create(power)}
+# Power.create(powers[0])
+
+
+#Seeed kept throwing an error
 
 heroines = [
   {name: "Kamala Khan", super_name: "Ms. Marvel"},
@@ -16,12 +20,13 @@ heroines = [
   {name:"Gwen Stacy", super_name:"Spider-Gwen" },
   {name:"Janet Van Dyne", super_name:"The Wasp" },
   {name:"Wanda Maximoff", super_name:"Scarlet Witch" },
-  {name:"Carol Danvers", super_name:"Captain Marvel" },
+  {name:"Carol Danvers", super_name:"Captain Marvel"  },
   {name:"Jean Grey", super_name:"Dark Phoenix" },
   {name:"Ororo Munroe", super_name:"Storm" },
-  {name:"Kitty Pryde", super_name:"Shadowcat" },
-  {name:"Elektra Natchios", super_name:"Elektra" }
+  {name:"Kitty Pryde", super_name:"Shadowcat"  },
+  {name:"Elektra Natchios", super_name:"Elektra"  }
 ]
+
 
 # ---------------
 # POWERFUL HEROINES:

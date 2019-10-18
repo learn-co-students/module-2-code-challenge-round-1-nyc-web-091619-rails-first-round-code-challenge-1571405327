@@ -1,0 +1,19 @@
+
+<h1> Create a new heroine </h1>
+<%= form_for :heroine do |f| %>
+  name: <%= f.text_field :name %><br />
+  super name: <%= f.text_field :super_name %><br />
+
+ 
+ 
+
+  <%= f.submit %>
+
+  
+<% end %>
+
+<%
+=begin%>
+ f.collection_select :power_id, Power.all, :id, :name 
+<%
+=end%> for dropdown
