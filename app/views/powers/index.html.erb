@@ -1,12 +1,8 @@
 <h2>All Superpowers</h2>
 
-<ul>
-  <% @powers.each do |power| %>
-    <li>
-      <%= power.name %>
-      <br>
-      Description: <%= power.description %>
-    </li>
-    <br>
+
+<ul><% @powers.each do |power| %><li>
+  <%= link_to power.name, power_path(power) %> </li>
   <% end %>
-</ul>
+ </ul>
+

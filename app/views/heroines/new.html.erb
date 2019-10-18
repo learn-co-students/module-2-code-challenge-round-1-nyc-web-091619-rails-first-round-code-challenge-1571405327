@@ -1,0 +1,22 @@
+<h1>Create a new Heroine</h1>
+<br>
+<%= form_with scope: :heroine, url: heroines_path, local: true do |form| %>
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+   
+    <p>
+      <%= form.label :super_name %><br>
+      <%= form.text_area :super_name %>
+    </p>
+
+    
+
+
+
+    <p>
+      <%= form.submit %>
+    </p>
+    
+  <% end %>

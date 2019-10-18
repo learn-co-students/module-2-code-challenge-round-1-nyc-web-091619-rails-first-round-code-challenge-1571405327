@@ -1,0 +1,10 @@
+<h2>NAME: <%=@power.name %></h2>
+ <ol>
+<% @power.heroines.each do |heroine| %>
+<%= link_to heroine.name, heroine_path(heroine) %><br>
+<% end %>
+</ol>
+
+
+
+  
