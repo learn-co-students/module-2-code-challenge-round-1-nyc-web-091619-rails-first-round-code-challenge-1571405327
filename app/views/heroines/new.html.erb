@@ -1,0 +1,19 @@
+<h1>Create Heroine</h1>
+
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key}" %>
+<% end %>
+
+<%= form_for @heroine do |f| %>
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %> <br>
+    <%= f.label :super_name, "Super Name" %>
+    <%= f.text_field :super_name %> <br>
+
+    <br>
+    
+    <%= f.label :power_id, "Super Power" %> <br>
+    <%= f.collection_select :power_id, @powers, :id, :name, prompt: true %> <br>
+    <br> <br>
+    <%= f.submit "Create Heroine"%>
+<% end %>
