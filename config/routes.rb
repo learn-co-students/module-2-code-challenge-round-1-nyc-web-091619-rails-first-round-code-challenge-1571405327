@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :powers, only: [:index, :show]
-  resources :heroines, only: [:index, :show, :new, :create] do
+  resources :powers
+  resources :heroines do
     collection do
       get 'search'
     end

@@ -32,6 +32,28 @@ class HeroinesController < ApplicationController
     end
   end
 
+  def edit
+    @heroine = Heroine.find(params[:id])
+  end
+
+  def update
+    @heroine = Heroine.find(params[:id])
+    @heroine.update(heroine_params)
+
+    if @heroine.valid?
+      redirect_to heroine_path(@heroine)
+    else
+      flash[:errors] = @heroine.errors.full_messages
+      redirect_to edit_heroine_path(@heroine)
+    end
+
+  end
+
+  def destroy
+    Heroine.destroy(params[:id])
+    redirect_to heroines_path
+
+  end
 
   private 
 

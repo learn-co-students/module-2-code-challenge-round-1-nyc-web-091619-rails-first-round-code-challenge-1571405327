@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ a:link {
+    color: hotpink;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(245, 8, 166);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(180, 10, 95);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(33, 221, 190);
+  }
