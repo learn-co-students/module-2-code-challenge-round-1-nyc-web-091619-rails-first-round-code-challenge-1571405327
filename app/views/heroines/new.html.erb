@@ -1,8 +1,9 @@
 <h1>Make a heroine here:</h1>
 
-<% if @heroine.errors.full_messages.length > 0 %>
-<h2><%= @heroine.errors.full_messages %></h2>
-<% end %>
+<p><% if @heroine.errors.any? %>
+<h2><%= @heroine.errors.full_messages.each {|m| puts m } %></h2>
+<% end %></p>
+
 
 <%= form_with model: @heroine do |heroine_form|%>
 <%= heroine_form.label :name %>
