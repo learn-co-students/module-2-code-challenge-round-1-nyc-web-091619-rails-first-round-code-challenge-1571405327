@@ -6,8 +6,8 @@ class PowersController < ApplicationController
 
   def show
     @power = Power.find(params[:id])
-    @name = @power.name
-    @description = @power.description
+    @name = @power.name.titlecase
+    @description = @power.description.capitalize
   end
 
   def new

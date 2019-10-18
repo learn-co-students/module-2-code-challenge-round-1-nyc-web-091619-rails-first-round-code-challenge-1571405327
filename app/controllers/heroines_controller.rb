@@ -12,9 +12,9 @@ class HeroinesController < ApplicationController
   def show
     @heroine = Heroine.find(params[:id])
     @power = @heroine.power
-    @power_name = @power.name
-    @super_name = @heroine.super_name
-    @name = @heroine.name
+    @power_name = @power.name.titlecase
+    @super_name = @heroine.super_name.titlecase
+    @name = @heroine.name.titlecase
   end
 
   def new
