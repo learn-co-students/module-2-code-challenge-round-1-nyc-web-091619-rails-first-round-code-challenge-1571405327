@@ -20,8 +20,7 @@ class HeroinesController < ApplicationController
       @heroine.save
       redirect_to heroine_path(@heroine)
     else
-      # flash[:errors] = @heroine.errors.full_messages
-      redirect_to new_heroine
+      redirect_to new_heroine_path
     end
   end
 
