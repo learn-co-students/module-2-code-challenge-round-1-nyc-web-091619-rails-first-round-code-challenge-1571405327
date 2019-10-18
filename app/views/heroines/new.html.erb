@@ -1,0 +1,14 @@
+<h1>Make a heroine here:</h1>
+
+<% if @heroine.errors.full_messages.length > 0 %>
+<h2><%= @heroine.errors.full_messages %></h2>
+<% end %>
+
+<%= form_with model: @heroine do |heroine_form|%>
+<%= heroine_form.label :name %>
+<%= heroine_form.text_field :name %> <br>
+<%= heroine_form.label :super_name %>
+<%= heroine_form.text_field :super_name %> <br>
+<%= heroine_form.collection_select :power_id, @powers, :id, :name, prompt: true %> <br>
+<%= heroine_form.submit "Create your heroine!" %>
+<% end  %>
