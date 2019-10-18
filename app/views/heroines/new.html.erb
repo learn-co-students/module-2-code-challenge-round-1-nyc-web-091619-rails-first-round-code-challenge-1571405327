@@ -1,0 +1,17 @@
+
+<h1> 🦸Create a new heroine! </h1>
+
+<% flash.each do |key, value| %>
+ <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+      
+<%= form_for @heroine do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br><br>
+<%= f.label :super_name %>
+<%= f.text_field :super_name %><br><br>
+<%# load all powers, iterate through and use a collection_select and add each iteration's block variable as an option, saving the power_id, so that we can pass it back to the controller's create method%>
+<%# collection_select(:heroine, :power_id, Power.all, :id, :name, prompt: true) %>
+<%= byebug %>
+<%= f.submit "Create Heroine" %>
+<% end %>
