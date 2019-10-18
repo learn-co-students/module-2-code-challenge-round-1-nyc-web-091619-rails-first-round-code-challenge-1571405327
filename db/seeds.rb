@@ -1,6 +1,7 @@
 Heroine.destroy_all
 Power.destroy_all
 
+puts 'making power'
 powers = [
   {name:"super strength", description: "gives the wielder super-human strengths" },
   {name:"flight", description: "gives the wielder the ability to fly through the skies at supersonic speed" },
@@ -10,6 +11,7 @@ powers = [
 
 powers.each {|power| Power.create(power)}
 
+puts 'making heroines'
 heroines = [
   {name: "Kamala Khan", super_name: "Ms. Marvel"},
   {name: "Doreen Green", super_name: "Squirrel Girl" },

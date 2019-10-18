@@ -1,0 +1,18 @@
+<h1> Create New Heroine </h1>
+
+<% if flash[:errors] %>
+    <ul>
+    <% flash[:errors].each do |message|%>
+        <li> <%= message %> </li>
+<% end %>
+
+<%= form_with model: @heroine do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :super_name %>
+<%= f.text_field :super_name %>
+<%= f.submit %>
+<% end %>
+
+<br>
+<%= link_to 'Back', heroine_path %>
