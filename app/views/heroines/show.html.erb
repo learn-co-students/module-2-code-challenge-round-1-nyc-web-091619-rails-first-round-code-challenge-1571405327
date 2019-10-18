@@ -1,0 +1,13 @@
+<h3>Heroine Name: <%= @heroine.name %></h3>
+<h3>Heroine Super Name: <%= @heroine.super_name %></h3>
+
+
+<%= link_to @heroine.power.name, power_path(@heroine.power) %>
+
+<p>
+<%= button_to "Delete Heroine", { action: "destroy", id: @heroine.id }, method: :delete, data: { confirm: "Are you sure?" } %>
+
+<br><br>
+<%= link_to 'Back to Heroine Page', heroines_path %>
+<br><br>
+<%= link_to 'View all Powers', powers_path %>

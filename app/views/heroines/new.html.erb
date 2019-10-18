@@ -1,0 +1,15 @@
+<h1>Create your own Heroine:</h1>
+
+<% if flash[:errors]%>
+    <ul>
+    <% flash[:errors].each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+
+<%= render 'form' %>
+
+<br><br>
+<%= link_to 'Back', heroines_path %>
