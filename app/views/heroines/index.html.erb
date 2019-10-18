@@ -1,5 +1,11 @@
 <h2>All Heroines</h2>
 
+<%= form_for 'filter_by_power', method: "get" do |f| %>
+  <%= f.label "Enter power to filter by: "%>
+  <%= f.text_field :power %>
+  <%= f.submit %>
+<% end %>
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>

@@ -25,6 +25,12 @@ class HeroinesController < ApplicationController
     end
   end
 
+  def filter_by_power
+    byebug
+    @heroines = Heroine.filter_by_power(params[:power])
+    render action: :index
+  end
+
   private
 
   def heroine_params
